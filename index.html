@@ -3,474 +3,751 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
+
   <!-- Primary Meta Tags -->
-  <!-- TODO: Replace with your paper title and author names -->
-  <meta name="title" content="PAPER_TITLE - AUTHOR_NAMES">
-  <!-- TODO: Write a compelling 150-160 character description of your research -->
-  <meta name="description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Add 5-10 relevant keywords for your research area -->
-  <meta name="keywords" content="KEYWORD1, KEYWORD2, KEYWORD3, machine learning, computer vision, AI">
-  <!-- TODO: List all authors -->
-  <meta name="author" content="FIRST_AUTHOR_NAME, SECOND_AUTHOR_NAME">
+  <meta name="title" content="HyCal: A Training-Free Prototype Calibration Method for Cross-Discipline Few-Shot Class-Incremental Learning">
+  <meta name="description" content="HyCal (CVPR 2026) is a training-free prototype calibration method that combines cosine similarity and Mahalanobis distance on frozen CLIP embeddings to mitigate Domain Gravity in cross-discipline few-shot class-incremental learning.">
+  <meta name="keywords" content="HyCal, Hybrid Prototype Calibration, few-shot class-incremental learning, FSCIL, XD-VSCIL, Domain Gravity, continual learning, CLIP, vision-language models, Mahalanobis distance, CVPR 2026">
+  <meta name="author" content="Eunju Lee, MiHyeon Kim, JuneHyoung Kwon, Yoonji Lee, JiHyun Kim, Soojin Jang, YoungBin Kim">
   <meta name="robots" content="index, follow">
   <meta name="language" content="English">
-  
-  <!-- Open Graph / Facebook -->
+
+  <!-- Open Graph -->
   <meta property="og:type" content="article">
-  <!-- TODO: Replace with your institution or lab name -->
-  <meta property="og:site_name" content="INSTITUTION_OR_LAB_NAME">
-  <!-- TODO: Same as paper title above -->
-  <meta property="og:title" content="PAPER_TITLE">
-  <!-- TODO: Same as description above -->
-  <meta property="og:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Replace with your actual website URL -->
-  <meta property="og:url" content="https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE">
-  <!-- TODO: Create a 1200x630px preview image and update path -->
-  <meta property="og:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
+  <meta property="og:title" content="HyCal: A Training-Free Prototype Calibration Method for Cross-Discipline Few-Shot Class-Incremental Learning">
+  <meta property="og:description" content="Training-free cosine–Mahalanobis prototype calibration on frozen CLIP embeddings that mitigates Domain Gravity in cross-discipline few-shot class-incremental learning. CVPR 2026.">
+  <!-- TODO: update if the page is served from a different URL -->
+  <meta property="og:url" content="https://ejlee5826.github.io/HyCal-project/">
+  <meta property="og:image" content="https://ejlee5826.github.io/HyCal-project/static/images/social_preview.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="PAPER_TITLE - Research Preview">
-  <meta property="article:published_time" content="2024-01-01T00:00:00.000Z">
-  <meta property="article:author" content="FIRST_AUTHOR_NAME">
+  <meta property="og:image:alt" content="HyCal — CVPR 2026">
+  <meta property="article:published_time" content="2026-04-17T00:00:00.000Z">
+  <meta property="article:author" content="Eunju Lee">
   <meta property="article:section" content="Research">
-  <meta property="article:tag" content="KEYWORD1">
-  <meta property="article:tag" content="KEYWORD2">
+  <meta property="article:tag" content="Few-Shot Class-Incremental Learning">
+  <meta property="article:tag" content="CLIP">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <!-- TODO: Replace with your lab/institution Twitter handle -->
-  <meta name="twitter:site" content="@YOUR_TWITTER_HANDLE">
-  <!-- TODO: Replace with first author's Twitter handle -->
-  <meta name="twitter:creator" content="@AUTHOR_TWITTER_HANDLE">
-  <!-- TODO: Same as paper title above -->
-  <meta name="twitter:title" content="PAPER_TITLE">
-  <!-- TODO: Same as description above -->
-  <meta name="twitter:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Same as social preview image above -->
-  <meta name="twitter:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
-  <meta name="twitter:image:alt" content="PAPER_TITLE - Research Preview">
+  <meta name="twitter:title" content="HyCal: A Training-Free Prototype Calibration Method for Cross-Discipline Few-Shot Class-Incremental Learning">
+  <meta name="twitter:description" content="Training-free cosine–Mahalanobis prototype calibration on frozen CLIP embeddings that mitigates Domain Gravity in cross-discipline few-shot class-incremental learning. CVPR 2026.">
+  <meta name="twitter:image" content="https://ejlee5826.github.io/HyCal-project/static/images/social_preview.png">
+  <meta name="twitter:image:alt" content="HyCal — CVPR 2026">
 
-  <!-- Academic/Research Specific -->
-  <meta name="citation_title" content="PAPER_TITLE">
-  <meta name="citation_author" content="FIRST_AUTHOR_LAST, FIRST_AUTHOR_FIRST">
-  <meta name="citation_author" content="SECOND_AUTHOR_LAST, SECOND_AUTHOR_FIRST">
-  <meta name="citation_publication_date" content="2024">
-  <meta name="citation_conference_title" content="CONFERENCE_NAME">
-  <meta name="citation_pdf_url" content="https://YOUR_DOMAIN.com/static/pdfs/paper.pdf">
-  
-  <!-- Additional SEO -->
-  <meta name="theme-color" content="#2563eb">
-  <meta name="msapplication-TileColor" content="#2563eb">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  
-  <!-- Preconnect for performance -->
+  <!-- Academic / Google Scholar -->
+  <meta name="citation_title" content="HyCal: A Training-Free Prototype Calibration Method for Cross-Discipline Few-Shot Class-Incremental Learning">
+  <meta name="citation_author" content="Lee, Eunju">
+  <meta name="citation_author_institution" content="Chung-Ang University">
+  <meta name="citation_author" content="Kim, MiHyeon">
+  <meta name="citation_author_institution" content="KT Corporation">
+  <meta name="citation_author" content="Kwon, JuneHyoung">
+  <meta name="citation_author_institution" content="Chung-Ang University">
+  <meta name="citation_author" content="Lee, Yoonji">
+  <meta name="citation_author_institution" content="Chung-Ang University">
+  <meta name="citation_author" content="Kim, JiHyun">
+  <meta name="citation_author_institution" content="Dentium">
+  <meta name="citation_author" content="Jang, Soojin">
+  <meta name="citation_author_institution" content="ETRI">
+  <meta name="citation_author" content="Kim, YoungBin">
+  <meta name="citation_author_institution" content="Chung-Ang University">
+  <meta name="citation_publication_date" content="2026">
+  <meta name="citation_conference_title" content="IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)">
+  <meta name="citation_arxiv_id" content="2604.15678">
+  <meta name="citation_pdf_url" content="https://arxiv.org/pdf/2604.15678">
+
+  <meta name="theme-color" content="#4f3fc4">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://ajax.googleapis.com">
-  <link rel="preconnect" href="https://documentcloud.adobe.com">
   <link rel="preconnect" href="https://cdn.jsdelivr.net">
 
+  <title>HyCal: Training-Free Prototype Calibration for Cross-Discipline FSCIL (CVPR 2026)</title>
 
-  <!-- TODO: Replace with your paper title and authors -->
-  <title>PAPER_TITLE - AUTHOR_NAMES | Academic Research</title>
-  
-  <!-- Favicon and App Icons -->
-  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
-  <link rel="apple-touch-icon" href="static/images/favicon.ico">
-  
-  <!-- Critical CSS - Load synchronously -->
+  <link rel="icon" type="image/svg+xml" href="static/images/favicon.svg">
+  <link rel="apple-touch-icon" href="static/images/apple-touch-icon.png">
+
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/index.css">
-  
-  <!-- Non-critical CSS - Load asynchronously -->
-  <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="static/css/bulma-slider.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  
-  <!-- Fallback for browsers that don't support preload -->
+  <link rel="stylesheet" href="static/css/hycal.css">
+  <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1.9.4/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript>
-    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
-    <link rel="stylesheet" href="static/css/bulma-slider.min.css">
-    <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1.9.4/css/academicons.min.css">
   </noscript>
-  
-  <!-- Fonts - Optimized loading -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  
-  <!-- Defer non-critical JavaScript -->
-  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script defer src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+
   <script defer src="static/js/fontawesome.all.min.js"></script>
-  <script defer src="static/js/bulma-carousel.min.js"></script>
-  <script defer src="static/js/bulma-slider.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
   <script defer src="static/js/index.js"></script>
-  
-  <!-- Structured Data for Academic Papers -->
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "ScholarlyArticle",
-    "headline": "PAPER_TITLE",
-    "description": "BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS",
+    "headline": "HyCal: A Training-Free Prototype Calibration Method for Cross-Discipline Few-Shot Class-Incremental Learning",
+    "description": "A training-free prototype calibration method that combines cosine similarity and Mahalanobis distance on frozen CLIP embeddings to mitigate Domain Gravity in cross-discipline few-shot class-incremental learning.",
     "author": [
-      {
-        "@type": "Person",
-        "name": "FIRST_AUTHOR_NAME",
-        "affiliation": {
-          "@type": "Organization",
-          "name": "INSTITUTION_NAME"
-        }
-      },
-      {
-        "@type": "Person",
-        "name": "SECOND_AUTHOR_NAME",
-        "affiliation": {
-          "@type": "Organization",
-          "name": "INSTITUTION_NAME"
-        }
-      }
+      {"@type": "Person", "name": "Eunju Lee", "affiliation": {"@type": "Organization", "name": "Chung-Ang University"}},
+      {"@type": "Person", "name": "MiHyeon Kim", "affiliation": {"@type": "Organization", "name": "KT Corporation"}},
+      {"@type": "Person", "name": "JuneHyoung Kwon", "affiliation": {"@type": "Organization", "name": "Chung-Ang University"}},
+      {"@type": "Person", "name": "Yoonji Lee", "affiliation": {"@type": "Organization", "name": "Chung-Ang University"}},
+      {"@type": "Person", "name": "JiHyun Kim", "affiliation": {"@type": "Organization", "name": "Dentium"}},
+      {"@type": "Person", "name": "Soojin Jang", "affiliation": {"@type": "Organization", "name": "ETRI"}},
+      {"@type": "Person", "name": "YoungBin Kim", "affiliation": {"@type": "Organization", "name": "Chung-Ang University"}}
     ],
-    "datePublished": "2024-01-01",
-    "publisher": {
-      "@type": "Organization",
-      "name": "CONFERENCE_OR_JOURNAL_NAME"
-    },
-    "url": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE",
-    "image": "https://YOUR_DOMAIN.com/static/images/social_preview.png",
-    "keywords": ["KEYWORD1", "KEYWORD2", "KEYWORD3", "machine learning", "computer vision"],
-    "abstract": "FULL_ABSTRACT_TEXT_HERE",
-    "citation": "BIBTEX_CITATION_HERE",
-    "isAccessibleForFree": true,
-    "license": "https://creativecommons.org/licenses/by/4.0/",
-    "mainEntity": {
-      "@type": "WebPage",
-      "@id": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE"
-    },
-    "about": [
-      {
-        "@type": "Thing",
-        "name": "RESEARCH_AREA_1"
-      },
-      {
-        "@type": "Thing", 
-        "name": "RESEARCH_AREA_2"
-      }
-    ]
-  }
-  </script>
-  
-  <!-- Website/Organization Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "INSTITUTION_OR_LAB_NAME",
-    "url": "https://YOUR_INSTITUTION_WEBSITE.com",
-    "logo": "https://YOUR_DOMAIN.com/static/images/favicon.ico",
-    "sameAs": [
-      "https://twitter.com/YOUR_TWITTER_HANDLE",
-      "https://github.com/YOUR_GITHUB_USERNAME"
-    ]
+    "datePublished": "2026-04-17",
+    "publisher": {"@type": "Organization", "name": "IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)"},
+    "url": "https://ejlee5826.github.io/HyCal-project/",
+    "sameAs": ["https://arxiv.org/abs/2604.15678", "https://github.com/EJLEE5826/HyCal-CIL"],
+    "keywords": ["few-shot class-incremental learning", "continual learning", "CLIP", "Mahalanobis distance", "prototype calibration"],
+    "isAccessibleForFree": true
   }
   </script>
 </head>
 <body>
 
+  <a class="skip-link" href="#main-content">Skip to content</a>
 
-  <!-- Scroll to Top Button -->
   <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
     <i class="fas fa-chevron-up"></i>
   </button>
 
-  <!-- More Works Dropdown -->
-  <div class="more-works-container">
-    <button class="more-works-btn" onclick="toggleMoreWorks()" title="View More Works from Our Lab">
-      <i class="fas fa-flask"></i>
-      More Works
-      <i class="fas fa-chevron-down dropdown-arrow"></i>
-    </button>
-    <div class="more-works-dropdown" id="moreWorksDropdown">
-      <div class="dropdown-header">
-        <h4>More Works from Our Lab</h4>
-        <button class="close-btn" onclick="toggleMoreWorks()">
-          <i class="fas fa-times"></i>
-        </button>
-      </div>
-      <div class="works-list">
-        <!-- TODO: Replace with your lab's related works -->
-        <a href="https://arxiv.org/abs/PAPER_ID_1" class="work-item" target="_blank">
-          <div class="work-info">
-            <!-- TODO: Replace with actual paper title -->
-            <h5>Paper Title 1</h5>
-            <!-- TODO: Replace with brief description -->
-            <p>Brief description of the work and its main contribution.</p>
-            <!-- TODO: Replace with venue and year -->
-            <span class="work-venue">Conference/Journal 2024</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-        <!-- TODO: Add more related works or remove extra items -->
-        <a href="https://arxiv.org/abs/PAPER_ID_2" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>Paper Title 2</h5>
-            <p>Brief description of the work and its main contribution.</p>
-            <span class="work-venue">Conference/Journal 2023</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-        <a href="https://arxiv.org/abs/PAPER_ID_3" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>Paper Title 3</h5>
-            <p>Brief description of the work and its main contribution.</p>
-            <span class="work-venue">Conference/Journal 2023</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
+  <nav class="hc-nav" aria-label="Sections">
+    <div class="hc-nav-inner">
+      <a href="#top" class="hc-nav-brand">HyCal</a>
+      <div class="hc-nav-links">
+        <a href="#abstract">Abstract</a>
+        <a href="#gravity">Domain Gravity</a>
+        <a href="#benchmark">XD-VSCIL</a>
+        <a href="#method">Method</a>
+        <a href="#results">Results</a>
+        <a href="#code">Code</a>
+        <a href="#BibTeX">BibTeX</a>
       </div>
     </div>
-  </div>
+  </nav>
 
   <main id="main-content">
-  <section class="hero">
+
+  <!-- Title / authors / links -->
+  <section class="hero hc-hero" id="top">
     <div class="hero-body">
-      <div class="container is-max-desktop">
-        <div class="columns is-centered">
-          <div class="column has-text-centered">
-            <!-- TODO: Replace with your paper title -->
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
-            <div class="is-size-5 publication-authors">
-              <!-- TODO: Replace with your paper authors and their personal links -->
-              <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
-                <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
-                  <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
-                  </span>
-                  </div>
+      <div class="container is-max-desktop has-text-centered">
+        <span class="hc-venue">CVPR 2026</span>
+        <h1 class="title is-2 publication-title">
+          <span class="hc-wordmark">HyCal</span>: A Training-Free Prototype Calibration Method for Cross-Discipline Few-Shot Class-Incremental Learning
+        </h1>
 
-                  <div class="is-size-5 publication-authors">
-                    <!-- TODO: Replace with your institution and conference/journal info -->
-                    <span class="author-block">Institution Name<br>Conference name and year</span>
-                    <!-- TODO: Remove this line if no equal contribution -->
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
-                  </div>
-
-                  <div class="column has-text-centered">
-                    <div class="publication-links">
-                         <!-- TODO: Update with your arXiv paper ID -->
-                      <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
-                        class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                          <i class="fas fa-file-pdf"></i>
-                        </span>
-                        <span>Paper</span>
-                      </a>
-                    </span>
-
-                    <!-- TODO: Add your supplementary material PDF or remove this section -->
-                    <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Supplementary</span>
-                    </a>
-                  </span>
-
-                  <!-- TODO: Replace with your GitHub repository URL -->
-                  <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>Code</span>
-                  </a>
-                </span>
-
-                <!-- TODO: Update with your arXiv paper ID -->
-                <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
-            </div>
-          </div>
+        <!-- TODO: add personal homepage links, e.g. <a href="https://..." target="_blank">Eunju Lee</a> -->
+        <div class="is-size-5 publication-authors">
+          <span class="author-block">Eunju Lee<sup>1*</sup>,</span>
+          <span class="author-block">MiHyeon Kim<sup>2*</sup>,</span>
+          <span class="author-block">JuneHyoung Kwon<sup>1</sup>,</span>
+          <span class="author-block">Yoonji Lee<sup>1</sup>,</span>
+          <span class="author-block">JiHyun Kim<sup>3</sup>,</span>
+          <span class="author-block">Soojin Jang<sup>4</sup>,</span>
+          <span class="author-block">YoungBin Kim<sup>1†</sup></span>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- Teaser video-->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <!-- TODO: Replace with your teaser video -->
-      <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">
-        <!-- TODO: Add your video file path here -->
-        <source src="static/videos/banner_video.mp4" type="video/mp4">
-      </video>
-      <!-- TODO: Replace with your video description -->
-      <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
-      </h2>
-    </div>
-  </div>
-</section>
-<!-- End teaser video -->
-
-<!-- Paper abstract -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <!-- TODO: Replace with your paper abstract -->
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
-          </p>
+        <div class="publication-authors hc-affil">
+          <span class="author-block"><sup>1</sup>Chung-Ang University</span>
+          <span class="author-block"><sup>2</sup>KT Corporation</span>
+          <span class="author-block"><sup>3</sup>Dentium</span>
+          <span class="author-block"><sup>4</sup>ETRI</span>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End paper abstract -->
-
-
-<!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- TODO: Replace with your research result images -->
-        <img src="static/images/carousel1.jpg" alt="First research result visualization" loading="lazy"/>
-        <!-- TODO: Replace with description of this result -->
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="Second research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="Third research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="Fourth research result visualization" loading="lazy"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
-    </div>
-  </div>
-</div>
-</div>
-</section>
-<!-- End image carousel -->
-
-
-
-
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- TODO: Replace with your YouTube video ID -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          </div>
+        <div class="publication-authors">
+          <span class="eql-cntrb"><sup>*</sup>Equal contribution &nbsp;·&nbsp; <sup>†</sup>Corresponding author</span>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End youtube video -->
 
-
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video1" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4" type="video/mp4">
-          </video>
+        <div class="publication-links">
+          <span class="link-block">
+            <a href="https://openaccess.thecvf.com/content/CVPR2026/html/Lee_HyCal_A_Training-Free_Prototype_Calibration_Method_for_Cross-Discipline_Few-Shot_Class-Incremental_CVPR_2026_paper.html" target="_blank" rel="noopener"
+               class="external-link button is-normal is-rounded is-dark">
+              <span class="icon"><i class="fas fa-file-pdf"></i></span>
+              <span>Paper</span>
+            </a>
+          </span>
+          <span class="link-block">
+            <a href="https://arxiv.org/abs/2604.15678" target="_blank" rel="noopener"
+               class="external-link button is-normal is-rounded is-dark">
+              <span class="icon"><i class="ai ai-arxiv"></i></span>
+              <span>arXiv</span>
+            </a>
+          </span>
+          <span class="link-block">
+            <a href="https://github.com/EJLEE5826/HyCal-CIL" target="_blank" rel="noopener"
+               class="external-link button is-normal is-rounded is-dark">
+              <span class="icon"><i class="fab fa-github"></i></span>
+              <span>Code</span>
+            </a>
+          </span>
+          <span class="link-block">
+            <a href="#BibTeX" class="external-link button is-normal is-rounded is-dark">
+              <span class="icon"><i class="fas fa-quote-right"></i></span>
+              <span>BibTeX</span>
+            </a>
+          </span>
         </div>
-        <div class="item item-video2">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video2" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video3" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End video carousel -->
 
-
-
-
-
-
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <!-- TODO: Replace with your poster PDF -->
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
+        <p class="hc-tldr">
+          <strong>TL;DR</strong> When few-shot tasks arrive from different visual disciplines with very different amounts of data,
+          data-rich or low-entropy domains pull the shared embedding space toward themselves (<em>Domain Gravity</em>).
+          HyCal counters this without any training: it scores every class with both cosine similarity and Mahalanobis distance on frozen CLIP
+          features, and weights the two by how many shots the class has.
+        </p>
       </div>
     </div>
   </section>
-<!--End paper poster -->
 
+  <!-- Teaser: Figure 1 -->
+  <section class="hero teaser" aria-labelledby="fig1-caption">
+    <div class="container is-max-desktop">
+      <figure class="hc-paper-fig">
+        <img src="static/images/fig1_paradigms.webp" width="1988" height="652"
+             alt="Four continual learning paradigms: single-domain CIL, single-domain FSCIL, cross-domain FSCIL with fixed shots, and XD-VSCIL with sequential domains, varying class counts and imbalanced shots.">
+        <figcaption class="hc-caption" id="fig1-caption">
+          <strong>Figure 1.</strong> Overview of continual learning paradigms. (a) CIL: class-incremental learning without domain shift.
+          (b) FSCIL: fixed shots per class within a single domain. (c) Cross-domain FSCIL: multiple domains with fixed shots and uniform class/sample sizes.
+          (d) XD-VSCIL (ours): sequential tasks from diverse domains, varying class counts, and data imbalance.
+        </figcaption>
+      </figure>
+    </div>
+  </section>
 
+  <!-- Abstract -->
+  <section class="section hero is-light" id="abstract">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Pretrained Vision–Language Models (VLMs) like CLIP show promise in continual learning, but existing Few-Shot Class-Incremental Learning (FSCIL)
+              methods assume homogeneous domains and balanced data distributions, limiting real-world applicability where data arises from heterogeneous
+              disciplines with imbalanced sample availability and varying visual complexity. We identify <strong>Domain Gravity</strong>, a representational
+              asymmetry where data imbalance across heterogeneous domains causes overrepresented or low-entropy domains to disproportionately influence the
+              embedding space, leading to prototype drift and degraded performance on underrepresented or high-entropy domains. To address this, we introduce
+              <strong>Cross-Discipline Variable Few-Shot Class-Incremental Learning (XD-VSCIL)</strong>, a benchmark capturing real-world heterogeneity and
+              imbalance where Domain Gravity naturally intensifies. We propose <strong>Hybrid Prototype Calibration (<span class="hc-sc">HyCal</span>)</strong>,
+              a training-free method combining cosine similarity and Mahalanobis distance to capture complementary geometric properties—directional alignment
+              and covariance-aware magnitude—yielding stable prototypes under imbalanced heterogeneous conditions. Operating on frozen CLIP embeddings,
+              <span class="hc-sc">HyCal</span> achieves consistent retention–adaptation improvements while maintaining efficiency. Experiments show
+              <span class="hc-sc">HyCal</span> effectively mitigates Domain Gravity and outperforms existing methods in imbalanced cross-domain incremental learning.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<!--BibTex citation -->
+  <!-- Contributions -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Contributions</h2>
+      <div class="hc-cards hc-cards-4">
+        <article class="hc-card">
+          <div class="hc-card-icon"><i class="fas fa-magnet"></i></div>
+          <h3>Domain Gravity</h3>
+          <p>A structural bias that explains representational drift under heterogeneous domain imbalance.</p>
+        </article>
+        <article class="hc-card">
+          <div class="hc-card-icon"><i class="fas fa-sliders-h"></i></div>
+          <h3><span class="hc-sc">HyCal</span></h3>
+          <p>A training-free cosine–Mahalanobis fusion method that mitigates Domain Gravity without modifying the backbone.</p>
+        </article>
+        <article class="hc-card">
+          <div class="hc-card-icon"><i class="fas fa-layer-group"></i></div>
+          <h3>XD-VSCIL</h3>
+          <p>A cross-discipline few-shot continual learning setting reflecting severe domain heterogeneity and imbalance.</p>
+        </article>
+        <article class="hc-card">
+          <div class="hc-card-icon"><i class="fas fa-chart-line"></i></div>
+          <h3>Experiments</h3>
+          <p><span class="hc-sc">HyCal</span> consistently improves retention–adaptation performance and remains robust even under strong Domain Gravity.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Domain Gravity -->
+  <section class="section hero is-light" id="gravity">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Domain Gravity</h2>
+
+      <blockquote class="hc-def">
+        <div class="hc-def-label">Definition 1 (Domain Gravity)</div>
+        Each domain induces a representational potential based on its visual coherence and data density.
+        Overrepresented or low-entropy domains exert disproportionately strong influence in the shared embedding space.
+      </blockquote>
+
+      <div class="content hc-prose">
+        <p>
+          Domain Gravity shows up in two ways. Pretrained VLMs such as CLIP inherit distributional biases from their training corpora,
+          so visually dominant or frequent domains shape the embedding geometry and minority or high-entropy domains get weaker, less stable representations.
+          The bias then intensifies when incremental tasks come from domains that differ in entropy, visual structure and data availability:
+          prototypes and embeddings drift toward visually coherent or data-rich domains.
+        </p>
+        <p>
+          A preliminary study makes this concrete with two domains, OrganMNIST (D<sub>med</sub>, 11 classes) and DTD (D<sub>tex</sub>, 47 classes).
+          Equalizing their sample counts (220 vs 235) lifts D<sub>med</sub> by nearly 5%p over the usual 10-shot split (110 vs 470).
+          At a 1:9 ratio (55 vs 470), RanPAC's D<sub>med</sub> accuracy collapses to 5.82%, while <span class="hc-sc">HyCal</span> keeps 60.37%.
+        </p>
+      </div>
+
+      <figure class="hc-paper-fig">
+          <img src="static/images/fig2_tsne.webp" width="1304" height="697" loading="lazy"
+               alt="t-SNE of OrganMNIST and DTD embeddings under conventional, balanced and imbalanced few-shot splits, for RanPAC (top) and HyCal (bottom), with class prototypes marked as stars.">
+          <figcaption class="hc-caption">
+            <strong>Figure 2.</strong> t-SNE of prototype embeddings for D<sub>med</sub> (green) and D<sub>tex</sub> (pink); stars mark prototypes.
+            RanPAC's prototypes drift away from their domain clusters, especially for the underrepresented domain.
+          </figcaption>
+        </figure>
+
+      <div class="tabbed"><div class="tabbed-head"><div class="tabbed-title">Table 1 · Two domains, three sample regimes (Last Acc., %)</div></div><div class="table-container"><table class="table hc-res hc-res-groups">
+<thead>
+<tr><th></th><th scope="colgroup" colspan="3" class="grp">General · 10-shot · 110 vs 470</th><th scope="colgroup" colspan="3" class="grp">Balanced · 20 vs 5-shot · 220 vs 235</th><th scope="colgroup" colspan="3" class="grp">Imbalanced · 5 vs 10-shot · 55 vs 470</th></tr>
+<tr><th scope="col">Method</th><th scope="col" class="num">D<sub>med</sub></th><th scope="col" class="num">D<sub>tex</sub></th><th scope="col" class="num">Last</th><th scope="col" class="num">D<sub>med</sub></th><th scope="col" class="num">D<sub>tex</sub></th><th scope="col" class="num">Last</th><th scope="col" class="num">D<sub>med</sub></th><th scope="col" class="num">D<sub>tex</sub></th><th scope="col" class="num">Last</th></tr>
+</thead><tbody>
+<tr class="is-zs"><th scope="row">Zero-shot</th><td class="num"><span class="v">22.4</span></td><td class="num"><span class="v">44.3</span></td><td class="num">–</td><td class="num"><span class="v">22.4</span></td><td class="num"><span class="v">44.3</span></td><td class="num">–</td><td class="num"><span class="v">22.4</span></td><td class="num"><span class="v">44.3</span></td><td class="num">–</td></tr>
+<tr class="is-ref"><th scope="row">Primal-RAIL</th><td class="num"><span class="v">54.65</span></td><td class="num"><span class="v">66.37</span></td><td class="num"><span class="v">60.51</span></td><td class="num"><span class="v">67.69</span></td><td class="num"><span class="v">61.64</span></td><td class="num"><span class="v">64.67</span></td><td class="num"><span class="v">56.28</span></td><td class="num"><span class="v">65.31</span></td><td class="num"><span class="v">60.79</span></td></tr>
+<tr><th scope="row">RanPAC</th><td class="num is-second"><span class="v">62.54</span></td><td class="num is-second"><span class="v">64.60</span></td><td class="num is-second"><span class="v">63.57</span></td><td class="num is-second"><span class="v">66.51</span></td><td class="num is-second"><span class="v">55.02</span></td><td class="num is-second"><span class="v">60.77</span></td><td class="num is-second"><span class="v">5.82</span></td><td class="num is-second"><span class="v">62.65</span></td><td class="num is-second"><span class="v">59.23</span></td></tr>
+<tr><th scope="row">KLDA</th><td class="num"><span class="v">3.46</span></td><td class="num"><span class="v">0.98</span></td><td class="num"><span class="v">1.23</span></td><td class="num"><span class="v">4.20</span></td><td class="num"><span class="v">0.99</span></td><td class="num"><span class="v">0.51</span></td><td class="num"><span class="v">4.73</span></td><td class="num"><span class="v">0.37</span></td><td class="num"><span class="v">1.83</span></td></tr>
+<tr class="is-ours"><th scope="row"><span class="hc-sc">HyCal</span> (Ours)</th><td class="num is-best"><span class="v">65.04</span></td><td class="num is-best"><span class="v">65.48</span></td><td class="num is-best"><span class="v">65.26</span></td><td class="num is-best"><span class="v">69.38</span></td><td class="num is-best"><span class="v">60.58</span></td><td class="num is-best"><span class="v">64.98</span></td><td class="num is-best"><span class="v">60.37</span></td><td class="num is-best"><span class="v">65.31</span></td><td class="num is-best"><span class="v">62.84</span></td></tr>
+</tbody></table></div><p class="hc-caption">D<sub>med</sub>: OrganMNIST (11 classes), D<sub>tex</sub>: DTD (47 classes); Last: Last accuracy over both domains. <strong>Bold</strong>: best, <u>underline</u>: second best among training-free methods; Primal-RAIL (trainable) in gray.</p></div>
+    </div>
+  </section>
+
+  <!-- Benchmark -->
+  <section class="section" id="benchmark">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">XD-VSCIL benchmark</h2>
+      <div class="content hc-prose">
+        <p>
+          In XD-VSCIL the model learns over steps \(t = 1, \dots, \mathcal{T}\). Each step brings a new domain \(\mathcal{D}^t\) from a new academic discipline,
+          with a class set \(\mathcal{C}^t\) disjoint from all classes seen before and only \(K_c^t\) training images per class.
+          Data from earlier domains is not accessible. Unlike standard FSCIL, \(K_c^t\) is not fixed: both the number of classes per step and the shots per class vary,
+          so the benchmark is imbalanced by construction.
+        </p>
+      </div>
+
+      <figure class="hc-paper-fig">
+        <img src="static/images/fig3_benchmark.webp" width="2088" height="307" loading="lazy"
+             alt="Training-sample distributions per domain under High-Scale Domain Imbalance, Balanced-in-Class Domain and Cross-Scale Imbalance, and example images from the eight domains.">
+        <figcaption class="hc-caption">
+          <strong>Figure 3.</strong> (a)–(c) Training-sample distributions under the three XD-VSCIL settings. (d) Example images from the eight domains.
+        </figcaption>
+      </figure>
+
+      <div class="table-container hc-table-wrap">
+        <table class="table is-fullwidth hc-table">
+          <caption>Domains in task order. Cells show shots per class · training images. Cross-Scale shows the seed-42 draw (Supp. Tables 10–11); every seed draws new shot counts.</caption>
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Domain</th>
+              <th scope="col">Discipline</th>
+              <th scope="col" class="num">Classes</th>
+              <th scope="col" class="num">High-Scale</th>
+              <th scope="col" class="num">Balanced-in-Class</th>
+              <th scope="col" class="num">Cross-Scale</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>1</td><td>Aircraft</td><td>Aeronautics</td><td class="num">100</td><td class="num">10 · 1,000</td><td class="num">5 · 500</td><td class="num">5–50 · 2,733</td></tr>
+            <tr><td>2</td><td>ArtBench</td><td>Art</td><td class="num">10</td><td class="num">5 · 50</td><td class="num">50 · 500</td><td class="num">13–50 · 298</td></tr>
+            <tr><td>3</td><td>DTD</td><td>Textures</td><td class="num">47</td><td class="num">20 · 940</td><td class="num">10 · 470</td><td class="num">5–49 · 1,433</td></tr>
+            <tr><td>4</td><td>EuroSAT</td><td>Remote sensing</td><td class="num">10</td><td class="num">5 · 50</td><td class="num">50 · 500</td><td class="num">8–44 · 303</td></tr>
+            <tr><td>5</td><td>Galaxy</td><td>Astronomy</td><td class="num">10</td><td class="num">5 · 50</td><td class="num">50 · 500</td><td class="num">7–49 · 278</td></tr>
+            <tr><td>6</td><td>MNIST</td><td>Fundamental visual perception</td><td class="num">10</td><td class="num">5 · 50</td><td class="num">50 · 500</td><td class="num">6–38 · 208</td></tr>
+            <tr><td>7</td><td>OrganMNIST</td><td>Medical imaging</td><td class="num">11</td><td class="num">5 · 55</td><td class="num">45 · 495</td><td class="num">7–48 · 331</td></tr>
+            <tr><td>8</td><td>OxfordFlowers</td><td>Fine-grained biology</td><td class="num">102</td><td class="num">10 · 1,020</td><td class="num">5 · 510</td><td class="num">5–49 · 2,910</td></tr>
+          </tbody>
+          <tfoot>
+            <tr><td></td><td colspan="2">Total</td><td class="num">300</td><td class="num">3,215</td><td class="num">3,975</td><td class="num">8,494</td></tr>
+          </tfoot>
+        </table>
+      </div>
+
+      <h3 class="hc-subhead">Settings</h3>
+      <div class="hc-settings">
+        <div class="hc-setting is-primary">
+          <span class="hc-tag">Primary</span>
+          <h4>High-Scale Domain Imbalance</h4>
+          <p>Uniform shots within each domain, but domains differ substantially in total size (50–55 vs 940–1,020 images), producing strong domain-level skew.</p>
+        </div>
+        <div class="hc-setting">
+          <h4>Balanced-in-Class Domain</h4>
+          <p>A controlled baseline: every domain contributes a comparable number of images (about 500).</p>
+        </div>
+        <div class="hc-setting">
+          <h4>Cross-Scale Imbalance</h4>
+          <p>Each class receives 5–50 samples, so both class-wise and domain-wise sample scales vary.</p>
+        </div>
+      </div>
+      <p class="hc-footnote">Also evaluated: four random domain orders, standard FSCIL at 5/10/15/20 shots, the X-TAIL benchmark, and an OpenCLIP backbone pretrained on DataComp-1B.</p>
+
+      <h3 class="hc-subhead">Cross-Discipline Efficiency (CDE) score</h3>
+      <div class="content hc-prose hc-prose-tight">
+        <p>
+          Besides Average and Last accuracy, the paper proposes S<sub>CDE</sub> to evaluate zero-shot generalization, plasticity, forgetting and data efficiency together.
+          Domains are weighted by \(w^t \propto 1/\sqrt{K^t}\), where \(K^t\) is the number of training images in \(\mathcal{D}^t\), so smaller domains count more.
+        </p>
+      </div>
+      <div class="hc-eqs hc-eqs-2">
+        <div class="hc-eq">
+          <div class="hc-eq-label">Adaptation and retention · Eq. (1)</div>
+          <div class="hc-eq-row">
+            <span>\(\displaystyle \mathrm{S}_{\text{adapt}} = \sum_{t=1}^{\mathcal{T}} w^t \cdot \frac{Z^t + A_t^t}{2}\)</span>
+            <span>\(\displaystyle \mathrm{S}_{\text{last}} = \sum_{t=1}^{\mathcal{T}} w^t \cdot A_t^{\mathcal{T}}\)</span>
+          </div>
+          <div class="hc-eq-note">\(Z^t\): zero-shot accuracy on \(\mathcal{D}^t\); \(A_t^t\): accuracy on \(\mathcal{D}^t\) right after step \(t\); \(A_t^{\mathcal{T}}\): accuracy on \(\mathcal{D}^t\) after the final step.</div>
+        </div>
+        <div class="hc-eq">
+          <div class="hc-eq-label">Overall score · Eq. (2)</div>
+          \[ \mathrm{S}_{\text{CDE}} = \frac{2 \cdot \mathrm{S}_{\text{adapt}} \cdot \mathrm{S}_{\text{last}}}{\mathrm{S}_{\text{adapt}} + \mathrm{S}_{\text{last}}} \]
+          <div class="hc-eq-note">\(\mathrm{S}_{\text{CDE}} = 0\) if the denominator is zero.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Method -->
+  <section class="section hero is-light" id="method">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Method</h2>
+      <div class="content hc-prose">
+        <p>
+          <span class="hc-sc">HyCal</span> (Hybrid Prototype Calibration) keeps CLIP frozen. During training it stores one prototype per class built from a few
+          fused image–text embeddings; at inference it matches a test embedding to every prototype with two complementary measures,
+          cosine similarity for direction and Mahalanobis distance for covariance-aware magnitude. No weights are updated and no parameters are added.
+        </p>
+      </div>
+
+      <figure class="hc-paper-fig">
+        <img src="static/images/fig4_method.webp" width="1987" height="915" loading="lazy"
+             alt="HyCal overview. Train phase: class images and the prompt 'a photo of a class' are encoded by frozen CLIP encoders, summed into fused embeddings, and stored as a class prototype of mean, precision matrix and shot count. Test phase: the test image is fused with each candidate class text, scored by cosine similarity and Mahalanobis distance, and combined by a shot-dependent dynamic sum.">
+        <figcaption class="hc-caption">
+          <strong>Figure 4.</strong> Overview of <span class="hc-sc">HyCal</span>. For each XD-VSCIL task, class prototypes are built from frozen CLIP embeddings of a few training images.
+          At inference, <span class="hc-sc">HyCal</span> combines cosine similarity and Mahalanobis distance to score test samples against prototypes.
+        </figcaption>
+      </figure>
+
+      <h3 class="hc-subhead">Why two distances?</h3>
+      <div class="hc-theorems">
+        <div class="hc-thm">
+          <div class="hc-thm-label">Theorem 1 · Independence</div>
+          <p>For \(X, Y \in \mathbb{R}^d\), let \(C = X^\top Y / (\lVert X \rVert \lVert Y \rVert)\) and \(M = \sqrt{(X - Y)^\top \Sigma^{-1} (X - Y)}\).
+            If \(\Delta = X - Y \sim \mathcal{N}(0, \sigma^2 I_d)\), write \(\Delta = RU\) with magnitude \(R = \lVert \Delta \rVert\) and direction \(U\).
+            Then \(R \perp U\), cosine depends only on \(U\) and Mahalanobis only on \(R\), so \(C \perp M\) and \(H(C, M) = H(C) + H(M)\).</p>
+        </div>
+        <div class="hc-thm">
+          <div class="hc-thm-label">Theorem 2 · Information gain</div>
+          <p>For a class label \(L\),
+            \(I(L; C, M) = I(L; C) + I(L; M \mid C) \ge \max\{I(L; C), I(L; M)\}\):
+            the pair carries at least as much label information as either measure alone.</p>
+        </div>
+      </div>
+      <p class="hc-footnote">Isotropy is used only for analytical clarity. Real CLIP embeddings are anisotropic, and under domain shift the directional and covariance-aware cues diverge further (Supp. Secs. 7.3–7.4).</p>
+
+      <h3 class="hc-subhead">Incremental prototype learning</h3>
+      <div class="hc-eqs">
+        <div class="hc-eq">
+          <div class="hc-eq-label">Fused embedding · Eq. (8)</div>
+          \[ z_i = [z_i^V ; z_i^T], \quad z_i^V = f_V(x_i),\; z_i^T = f_T(y_i) \]
+          <div class="hc-eq-note">\([\,;\,]\) is sum-based fusion; \(y_i\) is the prompt “a photo of a \(c_j\)”.</div>
+        </div>
+        <div class="hc-eq">
+          <div class="hc-eq-label">Prototype \(\mathcal{P}_c = \{\mu_c, \Sigma_c^{-1}, K_c^t\}\) · Eqs. (9)–(10)</div>
+          <div class="hc-eq-row">
+            <span>\(\displaystyle \mu_c = \frac{1}{K_c^t} \sum_{i=1}^{K_c^t} z_i^c\)</span>
+            <span>\(\displaystyle \Sigma_c^{reg} = (1 - \lambda)\, \Sigma_c + \lambda \gamma \mathbf{I}\)</span>
+          </div>
+          <div class="hc-eq-note">\(\Sigma_c^{-1} = (\Sigma_c^{reg})^{-1}\); \(\lambda = 10^{-4}\), \(\gamma = 1\) in all experiments.</div>
+        </div>
+      </div>
+
+      <h3 class="hc-subhead">Inference with hybrid distance calibration</h3>
+      <div class="hc-eqs">
+        <div class="hc-eq">
+          <div class="hc-eq-label">Two scores · Eqs. (11)–(12)</div>
+          <div class="hc-eq-row">
+            <span>\(\displaystyle d_{maha} = (z_{test,c} - \mu_c)^\top \Sigma_c^{-1} (z_{test,c} - \mu_c)\)</span>
+            <span>\(\displaystyle s_{cos} = \frac{z_{test,c} \cdot \mu_c}{\lVert z_{test,c} \rVert \lVert \mu_c \rVert}\)</span>
+          </div>
+          <div class="hc-eq-note">\(z_{test,c}\) fuses the test image embedding with the text embedding of candidate class \(c\). \(d_{maha}\) is normalized to [0, 1] for fusion.</div>
+        </div>
+        <div class="hc-eq">
+          <div class="hc-eq-label">Dynamic summation · Eq. (13)</div>
+          <div class="hc-eq-row">
+            <span>\(\displaystyle c_{pred} = \arg\max_{c \in \mathcal{C}_{seen}^t} \big[\, w_c \cdot d_{maha} + (1 - w_c) \cdot s_{cos} \,\big]\)</span>
+            <span>\(\displaystyle w_c = \frac{1}{1 + \exp\!\big(-(K_c^t - \alpha)/\beta\big)}\)</span>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="hc-subhead">Training-free and efficient</h3>
+      <ul class="hc-why">
+        <li><strong>No fine-tuning, no extra parameters.</strong> Only stored embedding statistics and distance computations; new disciplines are added without touching the backbone.</li>
+        <li><strong>Compact features.</strong> 512‑d CLIP ViT-B/16 embeddings, while Primal-RAIL and the other training-free baselines use 1024‑d.</li>
+        <li><strong>Cheap updates.</strong> Adding 10 classes costs 5.4 GFLOPs, versus 12 GFLOPs for retraining Primal-RAIL.</li>
+        <li><strong>Linear growth.</strong> Statistics are computed only for new classes; storing them for all 300 classes takes 301 MB.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Results -->
+  <section class="section" id="results">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Results</h2>
+      <div class="content hc-prose">
+        <p>
+          All methods use frozen CLIP ViT-B/16. <span class="hc-sc">HyCal</span> is compared with the training-free FeCAM, RanPAC and KLDA and with the trainable Primal-RAIL;
+          every number is the mean over seeds 0, 1, 42 and 1993.
+        </p>
+      </div>
+
+      <div class="hc-stats">
+        <div class="hc-stat">
+          <div class="hc-stat-label">Average Acc. · High-Scale</div>
+          <div class="hc-stat-value">54.48%</div>
+          <div class="hc-stat-delta">+4.50%p over RanPAC, the next-best training-free method</div>
+        </div>
+        <div class="hc-stat">
+          <div class="hc-stat-label">Last Acc. · High-Scale</div>
+          <div class="hc-stat-value">63.50%</div>
+          <div class="hc-stat-delta">+2.07%p over KLDA; above trainable Primal-RAIL (59.86%)</div>
+        </div>
+        <div class="hc-stat">
+          <div class="hc-stat-label">S<sub>CDE</sub> · Balanced-in-Class</div>
+          <div class="hc-stat-value">60.92</div>
+          <div class="hc-stat-delta">Highest of all five methods</div>
+        </div>
+      </div>
+
+      <h3 class="hc-subhead">High-Scale Domain Imbalance</h3>
+      <div class="tabbed" data-tabbed>
+<div class="tabbed-head"><div class="tabbed-title">Table 2 · High-Scale Domain Imbalance, per domain (%)</div><div class="seg" role="tablist" aria-label="Table 2 · High-Scale Domain Imbalance, per domain (%)"><button role="tab" class="seg-btn is-active" id="t2-avg-tab" aria-controls="t2-avg" aria-selected="true">Average Acc.</button><button role="tab" class="seg-btn" id="t2-last-tab" aria-controls="t2-last" aria-selected="false" tabindex="-1">Last Acc.</button></div></div>
+<div class="tabbed-panel" role="tabpanel" id="t2-avg" aria-labelledby="t2-avg-tab"><div class="table-container"><table class="table hc-res hc-res-stack">
+<thead>
+<tr><th scope="col">Method</th><th scope="col" class="num">Aircraft</th><th scope="col" class="num">ArtBench</th><th scope="col" class="num">DTD</th><th scope="col" class="num">EuroSAT</th><th scope="col" class="num">Galaxy</th><th scope="col" class="num">MNIST</th><th scope="col" class="num">Organ</th><th scope="col" class="num">Flower</th><th scope="col" class="num">Average</th><th scope="col" class="num">σ</th></tr>
+</thead><tbody>
+<tr class="is-zs"><th scope="row">Zero-shot</th><td class="num"><span class="v">23.91</span></td><td class="num"><span class="v">50.88</span></td><td class="num"><span class="v">41.90</span></td><td class="num"><span class="v">37.58</span></td><td class="num"><span class="v">9.80</span></td><td class="num"><span class="v">44.01</span></td><td class="num"><span class="v">17.97</span></td><td class="num"><span class="v">67.40</span></td><td class="num"><span class="v">56.41</span></td><td class="num"><span class="v">18.76</span></td></tr>
+<tr class="is-ref"><th scope="row">Primal-RAIL</th><td class="num"><span class="v">37.33</span><span class="ci">±0.17</span></td><td class="num"><span class="v">60.39</span><span class="ci">±0.74</span></td><td class="num"><span class="v">68.79</span><span class="ci">±1.20</span></td><td class="num"><span class="v">72.40</span><span class="ci">±1.11</span></td><td class="num"><span class="v">23.11</span><span class="ci">±8.42</span></td><td class="num"><span class="v">77.77</span><span class="ci">±6.00</span></td><td class="num"><span class="v">53.50</span><span class="ci">±0.75</span></td><td class="num"><span class="v">90.30</span><span class="ci">±0.67</span></td><td class="num"><span class="v">53.49</span><span class="ci">±0.79</span></td><td class="num"><span class="v">22.04</span><span class="ci">±1.59</span></td></tr>
+<tr><th scope="row">FeCAM</th><td class="num"><span class="v">10.75</span><span class="ci">±3.36</span></td><td class="num"><span class="v">0.00</span><span class="ci">±0.00</span></td><td class="num"><span class="v">33.64</span><span class="ci">±12.40</span></td><td class="num"><span class="v">0.00</span><span class="ci">±0.00</span></td><td class="num"><span class="v">0.00</span><span class="ci">±0.00</span></td><td class="num"><span class="v">0.00</span><span class="ci">±0.00</span></td><td class="num"><span class="v">0.00</span><span class="ci">±0.00</span></td><td class="num"><span class="v">1.38</span><span class="ci">±2.61</span></td><td class="num"><span class="v">8.91</span><span class="ci">±2.75</span></td><td class="num"><span class="v">11.91</span><span class="ci">±4.23</span></td></tr>
+<tr><th scope="row">RanPAC</th><td class="num is-second"><span class="v">36.99</span><span class="ci">±1.19</span></td><td class="num is-second"><span class="v">36.34</span><span class="ci">±3.74</span></td><td class="num"><span class="v">66.35</span><span class="ci">±0.79</span></td><td class="num"><span class="v">73.02</span><span class="ci">±5.11</span></td><td class="num is-best"><span class="v">40.97</span><span class="ci">±6.77</span></td><td class="num is-best"><span class="v">82.33</span><span class="ci">±4.10</span></td><td class="num is-best"><span class="v">60.66</span><span class="ci">±4.46</span></td><td class="num"><span class="v">92.82</span><span class="ci">±1.23</span></td><td class="num is-second"><span class="v">49.98</span><span class="ci">±0.61</span></td><td class="num"><span class="v">21.57</span><span class="ci">±1.61</span></td></tr>
+<tr><th scope="row">KLDA</th><td class="num"><span class="v">29.19</span><span class="ci">±0.47</span></td><td class="num"><span class="v">31.66</span><span class="ci">±2.65</span></td><td class="num is-second"><span class="v">68.07</span><span class="ci">±1.66</span></td><td class="num is-best"><span class="v">75.21</span><span class="ci">±4.56</span></td><td class="num"><span class="v">36.85</span><span class="ci">±3.87</span></td><td class="num is-second"><span class="v">79.95</span><span class="ci">±3.97</span></td><td class="num"><span class="v">59.52</span><span class="ci">±3.92</span></td><td class="num is-second"><span class="v">95.19</span><span class="ci">±1.46</span></td><td class="num"><span class="v">41.06</span><span class="ci">±0.80</span></td><td class="num"><span class="v">24.61</span><span class="ci">±0.91</span></td></tr>
+<tr class="is-ours"><th scope="row"><span class="hc-sc">HyCal</span> (Ours)</th><td class="num is-best"><span class="v">40.97</span><span class="ci">±0.69</span></td><td class="num is-best"><span class="v">49.99</span><span class="ci">±2.27</span></td><td class="num is-best"><span class="v">69.84</span><span class="ci">±1.07</span></td><td class="num is-second"><span class="v">74.70</span><span class="ci">±1.71</span></td><td class="num is-second"><span class="v">39.65</span><span class="ci">±2.62</span></td><td class="num"><span class="v">77.56</span><span class="ci">±6.05</span></td><td class="num is-second"><span class="v">60.47</span><span class="ci">±4.63</span></td><td class="num is-best"><span class="v">95.34</span><span class="ci">±0.78</span></td><td class="num is-best"><span class="v">54.48</span><span class="ci">±0.78</span></td><td class="num"><span class="v">19.50</span><span class="ci">±0.76</span></td></tr>
+</tbody></table></div></div>
+<div class="tabbed-panel" role="tabpanel" id="t2-last" aria-labelledby="t2-last-tab" hidden><div class="table-container"><table class="table hc-res hc-res-stack">
+<thead>
+<tr><th scope="col">Method</th><th scope="col" class="num">Aircraft</th><th scope="col" class="num">ArtBench</th><th scope="col" class="num">DTD</th><th scope="col" class="num">EuroSAT</th><th scope="col" class="num">Galaxy</th><th scope="col" class="num">MNIST</th><th scope="col" class="num">Organ</th><th scope="col" class="num">Flower</th><th scope="col" class="num">Average</th><th scope="col" class="num">σ</th></tr>
+</thead><tbody>
+<tr class="is-zs"><th scope="row">Zero-shot</th><td class="num"><span class="v">23.91</span></td><td class="num"><span class="v">50.88</span></td><td class="num"><span class="v">41.90</span></td><td class="num"><span class="v">37.58</span></td><td class="num"><span class="v">9.80</span></td><td class="num"><span class="v">44.01</span></td><td class="num"><span class="v">17.97</span></td><td class="num"><span class="v">67.40</span></td><td class="num"><span class="v">56.41</span></td><td class="num"><span class="v">18.76</span></td></tr>
+<tr class="is-ref"><th scope="row">Primal-RAIL</th><td class="num"><span class="v">36.91</span><span class="ci">±0.61</span></td><td class="num"><span class="v">60.44</span><span class="ci">±0.90</span></td><td class="num"><span class="v">67.75</span><span class="ci">±0.68</span></td><td class="num"><span class="v">71.66</span><span class="ci">±1.11</span></td><td class="num"><span class="v">20.90</span><span class="ci">±7.20</span></td><td class="num"><span class="v">77.73</span><span class="ci">±6.05</span></td><td class="num"><span class="v">53.23</span><span class="ci">±0.61</span></td><td class="num"><span class="v">90.30</span><span class="ci">±0.67</span></td><td class="num"><span class="v">59.86</span><span class="ci">±1.51</span></td><td class="num"><span class="v">22.53</span><span class="ci">±1.36</span></td></tr>
+<tr><th scope="row">FeCAM</th><td class="num"><span class="v">10.56</span><span class="ci">±3.43</span></td><td class="num"><span class="v">0.00</span><span class="ci">±0.00</span></td><td class="num"><span class="v">33.64</span><span class="ci">±12.40</span></td><td class="num"><span class="v">0.00</span><span class="ci">±0.00</span></td><td class="num"><span class="v">0.00</span><span class="ci">±0.00</span></td><td class="num"><span class="v">0.00</span><span class="ci">±0.00</span></td><td class="num"><span class="v">0.00</span><span class="ci">±0.00</span></td><td class="num"><span class="v">1.38</span><span class="ci">±2.61</span></td><td class="num"><span class="v">5.69</span><span class="ci">±1.90</span></td><td class="num"><span class="v">11.90</span><span class="ci">±4.24</span></td></tr>
+<tr><th scope="row">RanPAC</th><td class="num"><span class="v">37.20</span><span class="ci">±1.33</span></td><td class="num"><span class="v">36.86</span><span class="ci">±2.51</span></td><td class="num"><span class="v">66.71</span><span class="ci">±0.65</span></td><td class="num"><span class="v">72.89</span><span class="ci">±4.74</span></td><td class="num is-best"><span class="v">41.04</span><span class="ci">±6.97</span></td><td class="num is-best"><span class="v">81.25</span><span class="ci">±4.61</span></td><td class="num is-second"><span class="v">60.25</span><span class="ci">±4.51</span></td><td class="num"><span class="v">92.82</span><span class="ci">±1.23</span></td><td class="num"><span class="v">61.13</span><span class="ci">±1.29</span></td><td class="num"><span class="v">21.29</span><span class="ci">±1.67</span></td></tr>
+<tr><th scope="row">KLDA</th><td class="num is-second"><span class="v">39.38</span><span class="ci">±0.57</span></td><td class="num is-second"><span class="v">37.67</span><span class="ci">±2.96</span></td><td class="num is-second"><span class="v">68.99</span><span class="ci">±1.64</span></td><td class="num is-best"><span class="v">75.18</span><span class="ci">±4.39</span></td><td class="num"><span class="v">37.11</span><span class="ci">±3.07</span></td><td class="num is-second"><span class="v">78.77</span><span class="ci">±4.20</span></td><td class="num"><span class="v">59.17</span><span class="ci">±4.10</span></td><td class="num is-second"><span class="v">95.19</span><span class="ci">±1.46</span></td><td class="num is-second"><span class="v">61.43</span><span class="ci">±0.94</span></td><td class="num"><span class="v">21.89</span><span class="ci">±0.78</span></td></tr>
+<tr class="is-ours"><th scope="row"><span class="hc-sc">HyCal</span> (Ours)</th><td class="num is-best"><span class="v">40.98</span><span class="ci">±0.61</span></td><td class="num is-best"><span class="v">49.68</span><span class="ci">±2.23</span></td><td class="num is-best"><span class="v">69.59</span><span class="ci">±0.93</span></td><td class="num is-second"><span class="v">74.63</span><span class="ci">±1.78</span></td><td class="num is-second"><span class="v">39.54</span><span class="ci">±2.62</span></td><td class="num"><span class="v">77.71</span><span class="ci">±5.24</span></td><td class="num is-best"><span class="v">60.51</span><span class="ci">±4.73</span></td><td class="num is-best"><span class="v">95.34</span><span class="ci">±0.78</span></td><td class="num is-best"><span class="v">63.50</span><span class="ci">±0.73</span></td><td class="num"><span class="v">19.55</span><span class="ci">±0.80</span></td></tr>
+</tbody></table></div></div>
+<p class="hc-caption">Mean over 4 seeds with 95% confidence intervals. <strong>Bold</strong>: best, <u>underline</u>: second best among training-free methods. Primal-RAIL is trainable and shown in gray for reference. σ is the spread across domains.</p>
+</div>
+
+      <h3 class="hc-subhead">S<sub>CDE</sub> across settings</h3>
+      <div class="content hc-prose hc-prose-tight">
+        <p>
+          <span class="hc-sc">HyCal</span> achieves the highest S<sub>CDE</sub> in most XD-VSCIL settings, including
+          High-Scale Domain Imbalance (53.70) and Balanced-in-Class Domain (60.92).
+        </p>
+      </div>
+      <div class="tabbed" data-tabbed>
+<div class="tabbed-head"><div class="tabbed-title">Table 3 · S<sub>CDE</sub> across XD-VSCIL settings</div><div class="seg" role="tablist" aria-label="Table 3 · S&lt;sub&gt;CDE&lt;/sub&gt; across XD-VSCIL settings"><button role="tab" class="seg-btn is-active" id="t3-high-tab" aria-controls="t3-high" aria-selected="true">High-Scale Domain Imbalance</button><button role="tab" class="seg-btn" id="t3-bal-tab" aria-controls="t3-bal" aria-selected="false" tabindex="-1">Balanced-in-Class</button><button role="tab" class="seg-btn" id="t3-cross-tab" aria-controls="t3-cross" aria-selected="false" tabindex="-1">Cross-Scale Imbalance</button></div></div>
+<div class="tabbed-panel" role="tabpanel" id="t3-high" aria-labelledby="t3-high-tab"><div class="table-container"><table class="table hc-res hc-res-narrow">
+<thead>
+<tr><th scope="col">Method</th><th scope="col" class="num">S<sub>adapt</sub></th><th scope="col" class="num">S<sub>last</sub></th><th scope="col" class="num">S<sub>CDE</sub></th></tr>
+</thead><tbody>
+<tr class="is-ref"><th scope="row">Primal-RAIL</th><td class="num"><span class="v">49.41</span><span class="ci">±10.41</span></td><td class="num"><span class="v">57.86</span><span class="ci">±2.22</span></td><td class="num"><span class="v">53.18</span><span class="ci">±6.51</span></td></tr>
+<tr><th scope="row">FeCAM</th><td class="num"><span class="v">5.15</span><span class="ci">±13.52</span></td><td class="num"><span class="v">1.85</span><span class="ci">±0.62</span></td><td class="num"><span class="v">1.84</span><span class="ci">±2.08</span></td></tr>
+<tr><th scope="row">RanPAC</th><td class="num is-best"><span class="v">50.07</span><span class="ci">±8.59</span></td><td class="num"><span class="v">56.44</span><span class="ci">±10.35</span></td><td class="num is-second"><span class="v">52.57</span><span class="ci">±1.16</span></td></tr>
+<tr><th scope="row">KLDA</th><td class="num"><span class="v">42.39</span><span class="ci">±0.64</span></td><td class="num is-second"><span class="v">58.79</span><span class="ci">±1.47</span></td><td class="num"><span class="v">49.26</span><span class="ci">±0.95</span></td></tr>
+<tr class="is-ours"><th scope="row"><span class="hc-sc">HyCal</span> (Ours)</th><td class="num is-second"><span class="v">47.71</span><span class="ci">±0.53</span></td><td class="num is-best"><span class="v">61.39</span><span class="ci">±1.05</span></td><td class="num is-best"><span class="v">53.70</span><span class="ci">±0.74</span></td></tr>
+</tbody></table></div></div>
+<div class="tabbed-panel" role="tabpanel" id="t3-bal" aria-labelledby="t3-bal-tab" hidden><div class="table-container"><table class="table hc-res hc-res-narrow">
+<thead>
+<tr><th scope="col">Method</th><th scope="col" class="num">S<sub>adapt</sub></th><th scope="col" class="num">S<sub>last</sub></th><th scope="col" class="num">S<sub>CDE</sub></th></tr>
+</thead><tbody>
+<tr class="is-ref"><th scope="row">Primal-RAIL</th><td class="num"><span class="v">52.77</span><span class="ci">±0.34</span></td><td class="num"><span class="v">67.39</span><span class="ci">±0.68</span></td><td class="num"><span class="v">59.19</span><span class="ci">±0.47</span></td></tr>
+<tr><th scope="row">FeCAM</th><td class="num"><span class="v">10.80</span><span class="ci">±14.71</span></td><td class="num"><span class="v">11.55</span><span class="ci">±1.95</span></td><td class="num"><span class="v">10.06</span><span class="ci">±6.65</span></td></tr>
+<tr><th scope="row">RanPAC</th><td class="num is-best"><span class="v">56.42</span><span class="ci">±11.30</span></td><td class="num"><span class="v">63.97</span><span class="ci">±12.04</span></td><td class="num is-second"><span class="v">59.29</span><span class="ci">±0.36</span></td></tr>
+<tr><th scope="row">KLDA</th><td class="num"><span class="v">47.47</span><span class="ci">±0.25</span></td><td class="num is-best"><span class="v">70.61</span><span class="ci">±0.90</span></td><td class="num"><span class="v">56.77</span><span class="ci">±0.47</span></td></tr>
+<tr class="is-ours"><th scope="row"><span class="hc-sc">HyCal</span> (Ours)</th><td class="num is-second"><span class="v">53.63</span><span class="ci">±0.14</span></td><td class="num is-second"><span class="v">70.49</span><span class="ci">±0.23</span></td><td class="num is-best"><span class="v">60.92</span><span class="ci">±0.17</span></td></tr>
+</tbody></table></div></div>
+<div class="tabbed-panel" role="tabpanel" id="t3-cross" aria-labelledby="t3-cross-tab" hidden><div class="table-container"><table class="table hc-res hc-res-narrow">
+<thead>
+<tr><th scope="col">Method</th><th scope="col" class="num">S<sub>adapt</sub></th><th scope="col" class="num">S<sub>last</sub></th><th scope="col" class="num">S<sub>CDE</sub></th></tr>
+</thead><tbody>
+<tr class="is-ref"><th scope="row">Primal-RAIL</th><td class="num"><span class="v">46.95</span><span class="ci">±0.83</span></td><td class="num"><span class="v">57.27</span><span class="ci">±1.67</span></td><td class="num"><span class="v">51.60</span><span class="ci">±1.18</span></td></tr>
+<tr><th scope="row">FeCAM</th><td class="num"><span class="v">10.67</span><span class="ci">±3.58</span></td><td class="num"><span class="v">20.05</span><span class="ci">±7.06</span></td><td class="num"><span class="v">13.91</span><span class="ci">±4.68</span></td></tr>
+<tr><th scope="row">RanPAC</th><td class="num"><span class="v">49.32</span><span class="ci">±2.56</span></td><td class="num"><span class="v">62.08</span><span class="ci">±5.98</span></td><td class="num"><span class="v">54.96</span><span class="ci">±3.92</span></td></tr>
+<tr><th scope="row">KLDA</th><td class="num is-best"><span class="v">52.25</span><span class="ci">±0.48</span></td><td class="num is-best"><span class="v">69.39</span><span class="ci">±1.15</span></td><td class="num is-best"><span class="v">59.61</span><span class="ci">±0.72</span></td></tr>
+<tr class="is-ours"><th scope="row"><span class="hc-sc">HyCal</span> (Ours)</th><td class="num is-second"><span class="v">51.99</span><span class="ci">±0.35</span></td><td class="num is-second"><span class="v">68.83</span><span class="ci">±0.57</span></td><td class="num is-second"><span class="v">59.24</span><span class="ci">±0.41</span></td></tr>
+</tbody></table></div></div>
+<p class="hc-caption">Mean over 4 seeds with 95% confidence intervals. Bold/underline as in Table 2.</p>
+</div>
+
+      <figure class="hc-paper-fig">
+        <img src="static/images/fig5_stepwise.webp" width="2034" height="827" loading="lazy"
+             alt="Line charts of accuracy per incremental step for Primal-RAIL, RanPAC, KLDA and HyCal, overall and on Aircraft, ArtBench, DTD, MNIST and Organ, under the Balanced-in-Class and Cross-Scale settings.">
+        <figcaption class="hc-caption">
+          <strong>Figure 5.</strong> Task-wise accuracy across incremental steps under (a) Balanced-in-Class Domain and (b) Cross-Scale Imbalance.
+          Prior methods lose accuracy in the imbalanced setting, most visibly on MNIST, while <span class="hc-sc">HyCal</span> degrades little in either.
+        </figcaption>
+      </figure>
+
+      <h3 class="hc-subhead">Standard FSCIL</h3>
+      <div class="content hc-prose hc-prose-tight">
+        <p>With a fixed number of shots per class, <span class="hc-sc">HyCal</span> is the best training-free method on every metric from 5 to 20 shots,
+          including the 5-shot regime where KLDA's Average accuracy drops to 7.46%.</p>
+      </div>
+      <div class="tabbed" data-tabbed>
+<div class="tabbed-head"><div class="tabbed-title">Table 4 · Standard FSCIL, fixed shots per class</div><div class="seg" role="tablist" aria-label="Table 4 · Standard FSCIL, fixed shots per class"><button role="tab" class="seg-btn is-active" id="t4-5-tab" aria-controls="t4-5" aria-selected="true">5-shot</button><button role="tab" class="seg-btn" id="t4-10-tab" aria-controls="t4-10" aria-selected="false" tabindex="-1">10-shot</button><button role="tab" class="seg-btn" id="t4-15-tab" aria-controls="t4-15" aria-selected="false" tabindex="-1">15-shot</button><button role="tab" class="seg-btn" id="t4-20-tab" aria-controls="t4-20" aria-selected="false" tabindex="-1">20-shot</button></div></div>
+<div class="tabbed-panel" role="tabpanel" id="t4-5" aria-labelledby="t4-5-tab"><div class="table-container"><table class="table hc-res hc-res-narrow">
+<thead>
+<tr><th scope="col">Method</th><th scope="col" class="num">Last Acc.</th><th scope="col" class="num">Avg Acc.</th><th scope="col" class="num">S<sub>CDE</sub></th></tr>
+</thead><tbody>
+<tr class="is-ref"><th scope="row">Primal-RAIL</th><td class="num"><span class="v">59.40</span><span class="ci">±1.88</span></td><td class="num"><span class="v">51.61</span><span class="ci">±1.10</span></td><td class="num"><span class="v">52.58</span><span class="ci">±1.73</span></td></tr>
+<tr><th scope="row">FeCAM</th><td class="num"><span class="v">8.90</span><span class="ci">±1.12</span></td><td class="num"><span class="v">8.48</span><span class="ci">±0.28</span></td><td class="num"><span class="v">4.27</span><span class="ci">±6.13</span></td></tr>
+<tr><th scope="row">RanPAC</th><td class="num is-second"><span class="v">58.04</span><span class="ci">±1.53</span></td><td class="num is-second"><span class="v">45.48</span><span class="ci">±2.89</span></td><td class="num is-second"><span class="v">51.94</span><span class="ci">±1.10</span></td></tr>
+<tr><th scope="row">KLDA</th><td class="num"><span class="v">56.54</span><span class="ci">±0.61</span></td><td class="num"><span class="v">7.46</span><span class="ci">±0.08</span></td><td class="num"><span class="v">29.13</span><span class="ci">±0.06</span></td></tr>
+<tr class="is-ours"><th scope="row"><span class="hc-sc">HyCal</span> (Ours)</th><td class="num is-best"><span class="v">60.82</span><span class="ci">±0.97</span></td><td class="num is-best"><span class="v">50.58</span><span class="ci">±0.74</span></td><td class="num is-best"><span class="v">60.36</span><span class="ci">±1.35</span></td></tr>
+</tbody></table></div></div>
+<div class="tabbed-panel" role="tabpanel" id="t4-10" aria-labelledby="t4-10-tab" hidden><div class="table-container"><table class="table hc-res hc-res-narrow">
+<thead>
+<tr><th scope="col">Method</th><th scope="col" class="num">Last Acc.</th><th scope="col" class="num">Avg Acc.</th><th scope="col" class="num">S<sub>CDE</sub></th></tr>
+</thead><tbody>
+<tr class="is-ref"><th scope="row">Primal-RAIL</th><td class="num"><span class="v">59.40</span><span class="ci">±1.88</span></td><td class="num"><span class="v">51.61</span><span class="ci">±1.10</span></td><td class="num"><span class="v">52.58</span><span class="ci">±1.73</span></td></tr>
+<tr><th scope="row">FeCAM</th><td class="num"><span class="v">11.16</span><span class="ci">±3.26</span></td><td class="num"><span class="v">14.62</span><span class="ci">±4.23</span></td><td class="num"><span class="v">7.22</span><span class="ci">±1.76</span></td></tr>
+<tr><th scope="row">RanPAC</th><td class="num"><span class="v">64.34</span><span class="ci">±0.26</span></td><td class="num is-second"><span class="v">53.13</span><span class="ci">±0.78</span></td><td class="num is-second"><span class="v">56.19</span><span class="ci">±0.11</span></td></tr>
+<tr><th scope="row">KLDA</th><td class="num is-second"><span class="v">66.01</span><span class="ci">±0.46</span></td><td class="num"><span class="v">43.62</span><span class="ci">±0.44</span></td><td class="num"><span class="v">53.34</span><span class="ci">±0.34</span></td></tr>
+<tr class="is-ours"><th scope="row"><span class="hc-sc">HyCal</span> (Ours)</th><td class="num is-best"><span class="v">66.52</span><span class="ci">±0.28</span></td><td class="num is-best"><span class="v">56.69</span><span class="ci">±0.47</span></td><td class="num is-best"><span class="v">57.27</span><span class="ci">±0.21</span></td></tr>
+</tbody></table></div></div>
+<div class="tabbed-panel" role="tabpanel" id="t4-15" aria-labelledby="t4-15-tab" hidden><div class="table-container"><table class="table hc-res hc-res-narrow">
+<thead>
+<tr><th scope="col">Method</th><th scope="col" class="num">Last Acc.</th><th scope="col" class="num">Avg Acc.</th><th scope="col" class="num">S<sub>CDE</sub></th></tr>
+</thead><tbody>
+<tr class="is-ref"><th scope="row">Primal-RAIL</th><td class="num"><span class="v">59.40</span><span class="ci">±1.88</span></td><td class="num"><span class="v">51.61</span><span class="ci">±1.10</span></td><td class="num"><span class="v">52.58</span><span class="ci">±1.73</span></td></tr>
+<tr><th scope="row">FeCAM</th><td class="num"><span class="v">22.48</span><span class="ci">±6.51</span></td><td class="num"><span class="v">25.29</span><span class="ci">±2.84</span></td><td class="num"><span class="v">21.57</span><span class="ci">±8.40</span></td></tr>
+<tr><th scope="row">RanPAC</th><td class="num"><span class="v">66.52</span><span class="ci">±0.41</span></td><td class="num"><span class="v">56.62</span><span class="ci">±0.40</span></td><td class="num"><span class="v">57.86</span><span class="ci">±0.30</span></td></tr>
+<tr><th scope="row">KLDA</th><td class="num is-second"><span class="v">68.55</span><span class="ci">±0.51</span></td><td class="num is-second"><span class="v">57.19</span><span class="ci">±0.63</span></td><td class="num is-second"><span class="v">58.78</span><span class="ci">±0.39</span></td></tr>
+<tr class="is-ours"><th scope="row"><span class="hc-sc">HyCal</span> (Ours)</th><td class="num is-best"><span class="v">69.02</span><span class="ci">±0.37</span></td><td class="num is-best"><span class="v">59.27</span><span class="ci">±0.62</span></td><td class="num is-best"><span class="v">59.06</span><span class="ci">±0.22</span></td></tr>
+</tbody></table></div></div>
+<div class="tabbed-panel" role="tabpanel" id="t4-20" aria-labelledby="t4-20-tab" hidden><div class="table-container"><table class="table hc-res hc-res-narrow">
+<thead>
+<tr><th scope="col">Method</th><th scope="col" class="num">Last Acc.</th><th scope="col" class="num">Avg Acc.</th><th scope="col" class="num">S<sub>CDE</sub></th></tr>
+</thead><tbody>
+<tr class="is-ref"><th scope="row">Primal-RAIL</th><td class="num"><span class="v">59.40</span><span class="ci">±1.88</span></td><td class="num"><span class="v">51.61</span><span class="ci">±1.10</span></td><td class="num"><span class="v">52.58</span><span class="ci">±1.73</span></td></tr>
+<tr><th scope="row">FeCAM</th><td class="num"><span class="v">21.37</span><span class="ci">±3.18</span></td><td class="num"><span class="v">25.06</span><span class="ci">±2.13</span></td><td class="num"><span class="v">18.31</span><span class="ci">±10.96</span></td></tr>
+<tr><th scope="row">RanPAC</th><td class="num"><span class="v">67.85</span><span class="ci">±0.24</span></td><td class="num"><span class="v">58.29</span><span class="ci">±0.40</span></td><td class="num is-second"><span class="v">58.70</span><span class="ci">±0.17</span></td></tr>
+<tr><th scope="row">KLDA</th><td class="num is-second"><span class="v">69.73</span><span class="ci">±0.88</span></td><td class="num is-second"><span class="v">59.65</span><span class="ci">±0.61</span></td><td class="num"><span class="v">52.13</span><span class="ci">±0.68</span></td></tr>
+<tr class="is-ours"><th scope="row"><span class="hc-sc">HyCal</span> (Ours)</th><td class="num is-best"><span class="v">70.67</span><span class="ci">±0.21</span></td><td class="num is-best"><span class="v">60.90</span><span class="ci">±0.56</span></td><td class="num is-best"><span class="v">60.21</span><span class="ci">±0.06</span></td></tr>
+</tbody></table></div></div>
+<p class="hc-caption">Mean over 4 seeds with 95% confidence intervals. Bold/underline as in Table 2.</p>
+</div>
+
+      <h3 class="hc-subhead">Ablation and robustness</h3>
+      <div class="content hc-prose hc-prose-tight">
+        <p>
+          Under balanced data the Mahalanobis distance alone beats cosine similarity; as imbalance grows the gap narrows, and the shot-dependent
+          combination beats either measure and a fixed 50/50 average in every setting. Across four random domain orders,
+          <span class="hc-sc">HyCal</span> is the strongest or near-strongest method (Supp. Sec. 8.1).
+        </p>
+      </div>
+      <div class="tabbed" data-tabbed>
+<div class="tabbed-head"><div class="tabbed-title">Table 5 · Ablation: which distance?</div><div class="seg" role="tablist" aria-label="Table 5 · Ablation: which distance?"><button role="tab" class="seg-btn is-active" id="t5-high-tab" aria-controls="t5-high" aria-selected="true">High-Scale Domain Imbalance</button><button role="tab" class="seg-btn" id="t5-bal-tab" aria-controls="t5-bal" aria-selected="false" tabindex="-1">Balanced-in-Class</button><button role="tab" class="seg-btn" id="t5-cross-tab" aria-controls="t5-cross" aria-selected="false" tabindex="-1">Cross-Scale Imbalance</button></div></div>
+<div class="tabbed-panel" role="tabpanel" id="t5-high" aria-labelledby="t5-high-tab"><div class="table-container"><table class="table hc-res hc-res-narrow">
+<thead>
+<tr><th scope="col">Method</th><th scope="col" class="num">Last Acc.</th><th scope="col" class="num">Avg Acc.</th><th scope="col" class="num">S<sub>CDE</sub></th></tr>
+</thead><tbody>
+<tr><th scope="row">Cosine similarity</th><td class="num"><span class="v">60.09</span><span class="ci">±1.65</span></td><td class="num"><span class="v">51.46</span><span class="ci">±1.44</span></td><td class="num"><span class="v">51.29</span><span class="ci">±1.50</span></td></tr>
+<tr><th scope="row">Mahalanobis distance</th><td class="num"><span class="v">63.10</span><span class="ci">±0.85</span></td><td class="num"><span class="v">53.68</span><span class="ci">±0.71</span></td><td class="num"><span class="v">53.50</span><span class="ci">±0.87</span></td></tr>
+<tr><th scope="row">Average</th><td class="num is-second"><span class="v">63.33</span><span class="ci">±0.81</span></td><td class="num is-second"><span class="v">54.35</span><span class="ci">±0.95</span></td><td class="num is-second"><span class="v">53.68</span><span class="ci">±0.76</span></td></tr>
+<tr class="is-ours"><th scope="row">Dynamic (Ours)</th><td class="num is-best"><span class="v">63.50</span><span class="ci">±0.73</span></td><td class="num is-best"><span class="v">54.48</span><span class="ci">±0.78</span></td><td class="num is-best"><span class="v">53.70</span><span class="ci">±0.74</span></td></tr>
+</tbody></table></div></div>
+<div class="tabbed-panel" role="tabpanel" id="t5-bal" aria-labelledby="t5-bal-tab" hidden><div class="table-container"><table class="table hc-res hc-res-narrow">
+<thead>
+<tr><th scope="col">Method</th><th scope="col" class="num">Last Acc.</th><th scope="col" class="num">Avg Acc.</th><th scope="col" class="num">S<sub>CDE</sub></th></tr>
+</thead><tbody>
+<tr><th scope="row">Cosine similarity</th><td class="num"><span class="v">64.67</span><span class="ci">±0.82</span></td><td class="num"><span class="v">54.00</span><span class="ci">±0.82</span></td><td class="num"><span class="v">56.82</span><span class="ci">±0.55</span></td></tr>
+<tr><th scope="row">Mahalanobis distance</th><td class="num is-second"><span class="v">70.34</span><span class="ci">±0.28</span></td><td class="num"><span class="v">57.42</span><span class="ci">±0.27</span></td><td class="num is-second"><span class="v">60.78</span><span class="ci">±0.19</span></td></tr>
+<tr><th scope="row">Average</th><td class="num"><span class="v">69.80</span><span class="ci">±0.41</span></td><td class="num is-second"><span class="v">57.48</span><span class="ci">±0.64</span></td><td class="num"><span class="v">60.32</span><span class="ci">±0.17</span></td></tr>
+<tr class="is-ours"><th scope="row">Dynamic (Ours)</th><td class="num is-best"><span class="v">70.54</span><span class="ci">±0.23</span></td><td class="num is-best"><span class="v">57.75</span><span class="ci">±0.45</span></td><td class="num is-best"><span class="v">60.92</span><span class="ci">±0.17</span></td></tr>
+</tbody></table></div></div>
+<div class="tabbed-panel" role="tabpanel" id="t5-cross" aria-labelledby="t5-cross-tab" hidden><div class="table-container"><table class="table hc-res hc-res-narrow">
+<thead>
+<tr><th scope="col">Method</th><th scope="col" class="num">Last Acc.</th><th scope="col" class="num">Avg Acc.</th><th scope="col" class="num">S<sub>CDE</sub></th></tr>
+</thead><tbody>
+<tr><th scope="row">Cosine similarity</th><td class="num"><span class="v">65.09</span><span class="ci">±0.64</span></td><td class="num"><span class="v">55.85</span><span class="ci">±0.62</span></td><td class="num"><span class="v">56.44</span><span class="ci">±0.59</span></td></tr>
+<tr><th scope="row">Mahalanobis distance</th><td class="num"><span class="v">65.85</span><span class="ci">±1.47</span></td><td class="num"><span class="v">55.68</span><span class="ci">±1.46</span></td><td class="num"><span class="v">56.99</span><span class="ci">±1.41</span></td></tr>
+<tr><th scope="row">Average</th><td class="num is-second"><span class="v">67.63</span><span class="ci">±1.39</span></td><td class="num is-second"><span class="v">57.97</span><span class="ci">±1.36</span></td><td class="num is-second"><span class="v">58.24</span><span class="ci">±1.16</span></td></tr>
+<tr class="is-ours"><th scope="row">Dynamic (Ours)</th><td class="num is-best"><span class="v">68.69</span><span class="ci">±0.44</span></td><td class="num is-best"><span class="v">58.43</span><span class="ci">±0.51</span></td><td class="num is-best"><span class="v">59.24</span><span class="ci">±0.41</span></td></tr>
+</tbody></table></div></div>
+<p class="hc-caption">Average: fixed 50/50 sum of the two scores. Dynamic: the shot-dependent weight w<sub>c</sub> of Eq. (13). Bold: best, underline: second best.</p>
+</div>
+
+      <div class="content hc-prose hc-prose-tight">
+        <p>
+          With an OpenCLIP ViT-B/16 backbone pretrained on DataComp-1B, <span class="hc-sc">HyCal</span> leads on all three metrics.
+          On X-TAIL it has the best Last accuracy (77.44%), while KLDA leads Average accuracy and S<sub>CDE</sub>.
+        </p>
+      </div>
+      <div class="tabbed" data-tabbed>
+<div class="tabbed-head"><div class="tabbed-title">Table 6 · Other backbone and the X-TAIL benchmark</div><div class="seg" role="tablist" aria-label="Table 6 · Other backbone and the X-TAIL benchmark"><button role="tab" class="seg-btn is-active" id="t6-dc-tab" aria-controls="t6-dc" aria-selected="true">OpenCLIP ViT-B/16 (DataComp-1B)</button><button role="tab" class="seg-btn" id="t6-xtail-tab" aria-controls="t6-xtail" aria-selected="false" tabindex="-1">X-TAIL</button></div></div>
+<div class="tabbed-panel" role="tabpanel" id="t6-dc" aria-labelledby="t6-dc-tab"><div class="table-container"><table class="table hc-res hc-res-narrow">
+<thead>
+<tr><th scope="col">Method</th><th scope="col" class="num">Last Acc.</th><th scope="col" class="num">Avg Acc.</th><th scope="col" class="num">S<sub>CDE</sub></th></tr>
+</thead><tbody>
+<tr class="is-ref"><th scope="row">Primal-RAIL</th><td class="num"><span class="v">65.89</span></td><td class="num"><span class="v">58.10</span></td><td class="num"><span class="v">56.40</span></td></tr>
+<tr><th scope="row">RanPAC</th><td class="num is-second"><span class="v">66.20</span></td><td class="num is-second"><span class="v">55.78</span></td><td class="num is-second"><span class="v">55.64</span></td></tr>
+<tr><th scope="row">KLDA</th><td class="num"><span class="v">63.95</span></td><td class="num"><span class="v">41.24</span></td><td class="num"><span class="v">51.50</span></td></tr>
+<tr class="is-ours"><th scope="row"><span class="hc-sc">HyCal</span> (Ours)</th><td class="num is-best"><span class="v">68.88</span></td><td class="num is-best"><span class="v">59.89</span></td><td class="num is-best"><span class="v">57.94</span></td></tr>
+</tbody></table></div></div>
+<div class="tabbed-panel" role="tabpanel" id="t6-xtail" aria-labelledby="t6-xtail-tab" hidden><div class="table-container"><table class="table hc-res hc-res-narrow">
+<thead>
+<tr><th scope="col">Method</th><th scope="col" class="num">Last Acc.</th><th scope="col" class="num">Avg Acc.</th><th scope="col" class="num">S<sub>CDE</sub></th></tr>
+</thead><tbody>
+<tr class="is-ref"><th scope="row">Primal-RAIL</th><td class="num"><span class="v">73.82</span></td><td class="num"><span class="v">66.79</span></td><td class="num"><span class="v">69.48</span></td></tr>
+<tr><th scope="row">RanPAC</th><td class="num"><span class="v">69.74</span></td><td class="num is-second"><span class="v">67.60</span></td><td class="num"><span class="v">68.20</span></td></tr>
+<tr><th scope="row">KLDA</th><td class="num is-second"><span class="v">76.71</span></td><td class="num is-best"><span class="v">71.38</span></td><td class="num is-best"><span class="v">72.42</span></td></tr>
+<tr class="is-ours"><th scope="row"><span class="hc-sc">HyCal</span> (Ours)</th><td class="num is-best"><span class="v">77.44</span></td><td class="num"><span class="v">64.41</span></td><td class="num is-second"><span class="v">70.66</span></td></tr>
+</tbody></table></div></div>
+<p class="hc-caption">Left tab: High-Scale Domain Imbalance with an OpenCLIP ViT-B/16 backbone pretrained on DataComp-1B. Right tab: the X-TAIL cross-domain benchmark. Bold/underline as in Table 2.</p>
+</div>
+    </div>
+  </section>
+
+  <!-- Code -->
+  <section class="section hero is-light" id="code">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Code</h2>
+      <div class="content hc-prose">
+        <p>
+          The official implementation is at <a href="https://github.com/EJLEE5826/HyCal-CIL" target="_blank" rel="noopener">EJLEE5826/HyCal-CIL</a>
+          (MIT license), with configs and scripts for every setting above. Dataset preparation is described in the repository README.
+        </p>
+      </div>
+      <pre class="hc-code"><code>git clone https://github.com/EJLEE5826/HyCal-CIL.git HyCal-CIL
+cd HyCal-CIL
+conda create -n hycal python=3.9 -y
+conda activate hycal
+pip install -r requirements.txt
+
+# High-Scale Domain Imbalance, seeds 0 / 1 / 42 / 1993 on GPU 0
+DATA_ROOT=/path/to/datasets bash scripts/run_high_scale.sh 0</code></pre>
+    </div>
+  </section>
+
+  <!-- BibTeX -->
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <div class="bibtex-header">
@@ -480,41 +757,40 @@
           <span class="copy-text">Copy</span>
         </button>
       </div>
-      <pre id="bibtex-code"><code>@article{YourPaperKey2024,
-  title={Your Paper Title Here},
-  author={First Author and Second Author and Third Author},
-  journal={Conference/Journal Name},
-  year={2024},
-  url={https://your-domain.com/your-project-page}
+      <pre id="bibtex-code"><code>@InProceedings{Lee_2026_CVPR,
+    author    = {Lee, Eunju and Kim, MiHyeon and Kwon, JuneHyoung and Lee, Yoonji and Kim, JiHyun and Jang, Soojin and Kim, YoungBin},
+    title     = {HyCal: A Training-Free Prototype Calibration Method for Cross-Discipline Few-Shot Class-Incremental Learning},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+    month     = {June},
+    year      = {2026},
+    pages     = {29462-29471}
 }</code></pre>
     </div>
-</section>
-<!--End BibTex citation -->
+  </section>
 
+  </main>
 
   <footer class="footer">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-
-          <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p class="hc-ack">
+              <strong>Acknowledgments.</strong> This work was supported by the Institute of Information &amp; Communications Technology Planning &amp; Evaluation (IITP)
+              grant funded by the Korea government (MSIT) [RS-2021-II211341, Artificial Intelligence Graduate School Program (Chung-Ang University)] and by the
+              National Research Foundation of Korea (NRF) grant funded by the Korea government (MSIT) (RS-2025-00556246).
+            </p>
+            <p>
+              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank" rel="noopener">Academic Project Page Template</a>
+              which was adopted from the <a href="https://nerfies.github.io" target="_blank" rel="noopener">Nerfies</a> project page.
+              You are free to borrow the source code of this website, we just ask that you link back to this page in the footer.<br>
+              This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</footer>
+  </footer>
 
-<!-- Statcounter tracking code -->
-  
-<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
-
-    <!-- End of Statcounter Code -->
-
-  </body>
-  </html>
+</body>
+</html>
